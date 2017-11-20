@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pong-Js</title>
 </head>
+
 <body>
-<html>
 Some text here
 <canvas id="gameCanvas" width="800" height="600"></canvas>
 
 <script>
-    window.onload = () => console.log("Hello world!");
+    let canvas;
+    let canvasContext;
 
+    window.onload = () => {
+        console.log("Hello world!");
+        canvas = document.getElementById('gameCanvas');
+        canvasContext = canvas.getContext('2d');
+        canvasContext.fillStyle = 'black';
+        canvasContext.fillRect(0,0, canvas.width, canvas.height);
+    }
 </script>
 
-</html>
 </body>
 </html>
